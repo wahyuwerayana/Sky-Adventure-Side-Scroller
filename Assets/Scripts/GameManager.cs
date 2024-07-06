@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void ChangeScene(int sceneIndex){
+        ResumeGame();
         SceneManager.LoadScene(sceneIndex);
     }
     #endregion
