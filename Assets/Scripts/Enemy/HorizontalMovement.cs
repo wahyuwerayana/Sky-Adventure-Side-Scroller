@@ -14,12 +14,14 @@ public class HorizontalMovement : MonoBehaviour
     void Start(){
         originalPos = transform.position.x;
         sprite = GetComponent<SpriteRenderer>();
+        posXL = transform.position.x - distance;
+        posXR = transform.position.x + distance;
     }
 
     void SpriteFlip(){
-        if(transform.localPosition.x < posXL)
+        if(transform.localPosition.x <= posXL + 0.5f)
             sprite.flipX = true;
-        else if(transform.localPosition.x > posXR)
+        else if(transform.localPosition.x >= posXR - 0.5f)
             sprite.flipX = false;
     }
 

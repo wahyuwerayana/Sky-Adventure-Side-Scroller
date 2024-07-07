@@ -6,8 +6,7 @@ TagManager:
   tags:
   - Trap
   - Checkpoint
-  - Gear
-  - Trigger
+  - Enemy
   layers:
   - Default
   - TransparentFX

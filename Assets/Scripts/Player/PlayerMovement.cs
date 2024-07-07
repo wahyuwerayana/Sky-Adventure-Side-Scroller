@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpingPower = 10f;
     private bool isFacingRight = true;
     public Animator animationBool;
+    private bool doubleJump;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -22,9 +23,18 @@ public class PlayerMovement : MonoBehaviour
         } else{
             animationBool.SetBool("isWalking", false);
         }
+
         horizontal = Input.GetAxisRaw("Horizontal");
-        if(Input.GetButtonDown("Jump") && isGrounded()){
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+
+        if(isGrounded() && !Input.GetButton("Jump")){
+            doubleJump = false;
+        }
+
+        if(Input.GetButtonDown("Jump")){
+            if(isGrounded() || doubleJump){
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                doubleJump = !doubleJump;
+            }
         }
 
         if(isGrounded()){
