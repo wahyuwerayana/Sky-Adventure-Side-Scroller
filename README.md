@@ -5,7 +5,7 @@
 Sky Adventure is an exhilarating side-scroller platformer game set in a vibrant and whimsical sky world. Developed using the Unity Engine, this game invites players on a thrilling journey through floating islands, mystical creatures, and treacherous obstacles. With its captivating visuals and engaging gameplay, Sky Adventure offers a delightful experience for players of all ages.
 
 ## 🎯Gameplay
-
+Players control a daring adventurer navigating through a series of floating platforms and islands. The objective is to jump, run, and avoid through various obstacles in the game, such as creatures, spikes and water. Go to the stone checkpoint for saving progress and reach the pillars to finish the level.
 
 ## ⚙️Setup
 - Go to the release tab located in the right side of this page.
