@@ -19,9 +19,9 @@ public class HorizontalMovement : MonoBehaviour
     }
 
     void SpriteFlip(){
-        if(transform.localPosition.x <= posXL + 0.5f)
+        if(transform.localPosition.x <= posXL + 0.05f)
             sprite.flipX = true;
-        else if(transform.localPosition.x >= posXR - 0.5f)
+        else if(transform.localPosition.x >= posXR - 0.05f)
             sprite.flipX = false;
     }
 
