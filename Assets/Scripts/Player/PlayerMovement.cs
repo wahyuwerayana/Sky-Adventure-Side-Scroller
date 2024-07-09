@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private AudioSource jumpSound;
 
     // Update is called once per frame
     void Update()
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
             if(isGrounded() || doubleJump){
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 doubleJump = !doubleJump;
+                jumpSound.Play();
             }
         }
 
